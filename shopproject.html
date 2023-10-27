@@ -1,82 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/mainShop.css" rel="stylesheet" type="text/css">
     <link href="css/side.css" rel="stylesheet" type="text/css">
-    <title>login</title>
+    <title>index</title>
     <script src="js/jquery-3.7.0.min.js"></script>
 </head>
-<!-- 로그인 css는 본문 첨가 -->
-<!-- 로그인 css -->
-<style>
-    /* 로그인 전체 감싸는 구역 */
-    .container {
-        position: relative;
-        top: 170px;
-        left:100px;
-    }
-    /* 로그인 글자 감싸는 구역 */
-    #text {
-        width: 200px;       
-        height: 50px;
-        margin-top: 0px;
-    }
-    /* 로그인, member login 글자 */
-    h2, h3 {
-        text-align: center;
-    }
-    /* 폼 전체 감싸는 랩 */
-    #wrap {
-        border: 2px solid #ddd;
-        width: 600px;
-        margin: 0px auto;
-        height: 300px;
-        text-align: center;
-    }
-    /* member login감싸는 구역 */
-    .text {
-        width: 200px;
-        height: 10px;
-        margin-top:50px;
-    }
-    /* 폼만 감싸는 구역 */
-    .input {
-        width: 500px;
-        height: 100px;
-        position: relative;
-    }
-    /* 아이디, 비밀번호 */
-    input[type=text],[type=password]{
-        width: 350px;
-        height: 40px;
-        position: absolute;
-    }
-    /* 아이디만 */
-    input[type=text]{
-        left: 0;
-        top: 50px;
-    }
-    /* 비밀번호만 */
-    input[type=password]{
-        top: 100px;
-        left: 0px;
-    }
-    /* 확인(전송) 버튼 */
-    input[type=submit]{
-        width: 100px;
-        height: 100px;
-        background: #2e2e2e;
-        border: none;
-        color: #fff;
-        position: absolute;
-        top: 48px;
-        right: 35px;
-    }
-    
 
-</style>
 <body>
     <header>
         <nav class="icon_side">
@@ -104,67 +37,66 @@
             </div>
             <!-- 사이드 메뉴 네비 -->
             <nav class="menu">
-              <ul class="navi">
-                <li><span>PRODUCT</span>
-                  <ul class="submenu">
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">TOP</a></li>
-                    <li><a href="#">OUTER</a></li>
-                    <li><a href="#">BOTTOM</a></li>
-                    <li><a href="#">ETC</a></li>
-                  </ul>
-                </li>
-                
-                <li><span>ABOUT</span>
-                  <ul class="submenu">
-                    <li><a href="#">FAQ</a></li>
-                  </ul>
-                </li>
-                
-                <li><span>NEW</span>
-                  <ul class="submenu">
-                    <li><a href="#">new</a></li>
-                  </ul>
-                </li>
-              </ul>
+                <ul class="navi">
+                    <li><span>PRODUCT</span>
+                        <ul class="submenu">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">OUTER</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>ABOUT</span>
+                        <ul class="submenu">
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>NEW</span>
+                        <ul class="submenu">
+                            <li><a href="#">new</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
+        </article>
+        <!--오른쪽사이드-->
+        <article class="right_main_view">
+            <!--메인 이미지섹션-->
+            <div class="mainImg">
+                <video src="images/mainVedio.mp4" autoplay loop muted></video>
+            </div>
+
+
+            <!--상품 섹션-->
+            <div class="middle_section">
+                중간들어가는부분
+            </div>
+            
+            <div id="footer">
+                <div class="shop_footer">
+                    <div class="textBox">
+                        <h1>
+                            Footer 영역
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="clear"></div> -->
         </article>
     </section>
 
-    <!-- 로그인 영역 -->
-    <div class="container">
-        <div id="text">
-            <p><h2>로그인</h2></p>
-        </div>
-        <div id="wrap">
-            <div class="text"><h3>Member Login</h3></div>
-            <div class="input">
-                <input type="text" name="id" placeholder="">
-                <input type="password" name="password" placeholder="PASSWORD">
-                <input value="로그인" type="submit" name="login">
-            </div>
-        </div>
-    </div>
-
-    <!-- <div id="footer">
-        <div class="shop_footer">
-            <div class="textBox">
-                <h1>
-                    Footer 영역
-                </h1>
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div> -->
-
     <script>
-        jQuery(document).ready(function(){
-	$('.navi>li').mouseover(function(){
-		$(this).find('.submenu').stop().slideDown(500);
-	}).mouseout(function(){
-		$(this).find('.submenu').stop().slideUp(500);
-	});
-    });
+        jQuery(document).ready(function () {
+            $('.navi>li').mouseover(function () {
+                $(this).find('.submenu').stop().slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu').stop().slideUp(500);
+            });
+        });
     </script>
 </body>
+
 </html>

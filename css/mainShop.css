@@ -118,7 +118,7 @@ section .right_main_view .mainImg video{
     height:100%;
 }
 /*상품섹션*/
-section .right_main_view .product{
+section .right_main_view .middle_section{
     text-align:center;
 }
 
