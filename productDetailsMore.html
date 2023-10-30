@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/mainShop.css" rel="stylesheet" type="text/css">
+    <link href="css/side.css" rel="stylesheet" type="text/css">
+    <link href="css/productDetailsMore.css" rel="stylesheet" type="text/css">
+    <title>index</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/productDetailsMore.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="icon_side">
+            <div>
+                <div class="icon_member">
+                    <a href="#">
+                        <img src="images/memberB.png" alt="member">
+                    </a>
+                </div>
+                <div class="icon_basket">
+                    <a href="#">
+                        <img src="images/basket.png" alt="basket">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </header>
+
+    <section>
+        <!--왼쪽사이드-->
+        <article class="left_side">
+            <div class="logo">
+                <img src="images/mainLogo.png" alt="mainLogo">
+            </div>
+            <!-- 사이드 메뉴 네비 -->
+            <nav class="menu">
+                <ul class="navi">
+                    <li><span>PRODUCT</span>
+                        <ul class="submenu">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">OUTER</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>ABOUT</span>
+                        <ul class="submenu">
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>NEW</span>
+                        <ul class="submenu">
+                            <li><a href="#">new</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </article>
+        <!--오른쪽사이드-->
+        <article class="right_main_view">
+            <!--상품 섹션카테고리별 등록-->
+            <div class="productDetailsMore">
+                <div class="productDetailsMoreTop">
+                    <div class="DetailsImage">
+                        <div class="DetailsImageSmall">
+                            <div class="DetailsImageSmall1">
+                                <img src="images/product/TOP/TopImg1_1.jpg">
+                            </div>
+                            <div class="DetailsImageSmall2">
+                                <img src="images/product/TOP/Topimg1_2.jpg">
+                            </div>
+                        </div>
+                        <div class="DetailsImageBig">
+                            <img src="images/product/TOP/TopImg1.jpg">
+                        </div>
+                    </div>
+                    <div class="DetailsTextBox">
+                        <div class="DetailsTextBoxSub">
+                            <div class="DetailsTextBoxSubF">
+                                <div>상품제목</div>
+                                <div>layered half shirt, 녹임 남자 여자 미니멀 레이어드 아메카지 반팔 셔츠</div>
+                            </div>
+                            <div class="DetailsTextBoxSubF">
+                                <div>Price</div>
+                                <div>73,000 Won</div>
+                            </div>
+                            <div class="DetailsTextBoxSubF">
+                                <div>Color</div>
+                                <div>Black / White / Blue</div>
+                            </div>
+                            <div class="DetailsTextBoxSubF">
+                                <div>Size</div>
+                                <div>Free</div>
+                            </div>
+                            <div class="DetailsTextBoxSubF">
+                                <div>배송</div>
+                                <div></div>
+                            </div>
+                            <p>
+                                택배
+                            </p>
+                            <p>
+                                3,000원(50,000원 이상 구매시 무료)
+                            </p>
+                            <div class="DetailsTextBoxSubOp">
+                                <form>
+                                    <select style="width:100%;padding:0.5263vw 0 0.5263vw 1.0526vw;">
+                                        <option>[필수] 옵션을 선택해주세요.</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="DetailsTextBoxSubOp" style="margin-bottom:0;">
+                                <form>
+                                    <select style="width:100%;padding:0.5263vw 0 0.5263vw 1.0526vw;">
+                                        <option>[필수] 옵션을 선택해주세요.</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="DetailsTextBoxSubF DetailsEx">
+                                <div>
+                                    상품명 / 사이즈 / 색상
+                                </div>
+                                <div>
+                                    수량
+                                </div>
+                                <div>
+                                    가격
+                                </div>
+                            </div>
+                            <div class="DetailsTextBoxButton">
+                                <div>
+                                    <a href="#">
+                                        <p>구매하기</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <p>장바구니</p>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">
+                                        <p>관심상품</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="productDetailsMoreMiddle">
+                    <img src="images/CommonProduct.png">
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="shop_footer">
+                    <div class="textBox">
+                        <h1>
+                            Footer 영역
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </article>
+    </section>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('.navi>li').mouseover(function () {
+                $(this).find('.submenu').stop().slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu').stop().slideUp(500);
+            });
+        });
+    </script>
+</body>
+
+</html>
