@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/mypage.css" rel="stylesheet" type="text/css">
+    <link href="css/side.css" rel="stylesheet" type="text/css">
+    <title>index</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="icon_side">
+            <div>
+                <div class="icon_member">
+                    <!-- 마이페이지로 이동 -->
+                    <a href="Mypage.html">
+                        <img src="images/memberB.png" alt="member">
+                    </a>
+                </div>
+                <div class="icon_basket">
+                    <!-- 장바구니페이지로 이동 -->
+                    <a href="cart.html">
+                        <img src="images/basket.png" alt="basket">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </header>
+
+    <section>
+        <!--왼쪽사이드-->
+        <article class="left_side">
+            <div class="logo">
+                <img src="images/mainLogo.png" alt="mainLogo">
+            </div>
+            <!-- 사이드 메뉴 네비 -->
+            <nav class="menu">
+                <ul class="navi">
+                    <li><span>PRODUCT</span>
+                        <ul class="submenu">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">OUTER</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>ABOUT</span>
+                        <ul class="submenu">
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>NEW</span>
+                        <ul class="submenu">
+                            <li><a href="#">new</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </article>
+        <!--오른쪽사이드-->
+        <article class="right_main_view">
+
+            <!--마이페이지 섹션-->
+            <div class="mypage">
+                <p class="mypage_text"><b>My Page</b></p>
+
+                <div class="order_state">
+                    <!-- 윗 상자 -->
+                    <div class="state_title">
+                        <h3>
+                            나의 주문 처리 현황
+                            <span class="desc">
+                                (최근
+                                <em>3개월</em>
+                                기준)
+                            </span>
+                        </h3>
+                    </div>
+
+                    <!-- 밑 상자 -->
+                    <div class="state_mid">
+                        <ul class="order">
+                            <li>
+                                <strong>입금대기</strong>
+                                <!-- 숫자 클릭시 페이지이동 -->
+                                <a href="#">
+                                    <span id="mypage_order_count">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <strong>배송준비중</strong>
+                                <!-- 숫자 클릭시 페이지이동 -->
+                                <a href="#">
+                                    <span id="mypage_order_count">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <span class="m_dot"></span>
+                                <strong>배송중</strong>
+                                <!-- 숫자 클릭시 페이지이동 -->
+                                <a href="#">
+                                    <span id="mypage_order_count">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <strong>배송완료</strong>
+                                <!-- 숫자 클릭시 페이지이동 -->
+                                <a href="#">
+                                    <span id="mypage_order_count">
+                                        0
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="cs">
+                            <li>
+                                <strong>취소 : </strong>
+                                <a href="#">
+                                    <span id="mypage_cs_count">
+                                        0
+                                </a>
+                                </span>
+                            </li>
+                            <li>
+                                <strong>교환 : </strong>
+                                <a href="#">
+                                    <span id="mypage_cs_count">
+                                        0
+                                </a>
+                                </span>
+                            </li>
+                            <li>
+                                <strong>반품 : </strong>
+                                <a href="#">
+                                    <span id="mypage_cs_count">
+                                        0
+                                </a>
+                                </span>
+                            </li>
+                        </ul>
+                        <ul class="cs">
+                            <li>
+                                <strong>장바구니 : </strong>
+                                <a href="#">
+                                    <span id="mypage_cs_count">
+                                        0
+                                </a>
+                                </span>
+                            </li>
+                            <li>
+                                <strong>관심상품 : </strong>
+                                <a href="#">
+                                    <span id="mypage_cs_count">
+                                        0
+                                </a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="state_end">
+                    <ul class="order_list">
+                        <!-- 주문내역페이지로 이동 -->
+                        <a href="order.html">
+                            <li class="order_check">
+                                <div class="mypage_icon">
+                                    <img src="images/OrderIcon.png" alt="member" style="width: 50px; height: 53px;">
+                                </div>
+                                <div class="profile_title">
+                                    <p class="profile_mid">Order</p>
+                                    <p class="profile_mid_2">주문내역 조회</p>
+                                </div>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li class="profile_check">
+                                <div class="mypage_icon">
+                                    <!-- 아이콘사이즈 수정 -->
+                                    <img src="images/memberB.png" alt="member" style="width: 60px; height: 53px;">
+                                </div>
+                                <div class="profile_title">
+                                    <p class="profile_mid">Profile</p>
+                                    <p class="profile_mid_2">회원 정보</p>
+                                </div>
+                            </li>
+                        </a>
+
+                        <a href="#">
+                            <li class="wishlist_check">
+                                <div class="mypage_icon">
+                                    <img src="images/wishlist.png" alt="member" style="width: 55px;" height="53px">
+                                </div>
+                                <div class="profile_title">
+                                    <p class="profile_mid">Wishlist</p>
+                                    <p class="profile_mid_2">관심 상품</p>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="footer">
+                <div class="shop_footer">
+                    <div class="textBox">
+                        <h1>
+                            Footer 영역
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="clear"></div> -->
+        </article>
+    </section>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('.navi>li').mouseover(function () {
+                $(this).find('.submenu').stop().slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu').stop().slideUp(500);
+            });
+        });
+    </script>
+</body>
+
+</html>
