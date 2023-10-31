@@ -1,12 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/mainShop.css" rel="stylesheet" type="text/css">
     <link href="css/side.css" rel="stylesheet" type="text/css">
-    <title>index</title>
+    <title>login</title>
     <script src="js/jquery-3.7.0.min.js"></script>
 </head>
 <!-- 로그인 css는 본문 첨가 -->
@@ -64,6 +64,15 @@
         top: 100px;
         left: 0px;
     }
+    /* 아이디 찾기, 비밀번호 찾기, 회원가입 글자 */
+    .move {
+        position: absolute;
+        top: 150px;
+    }
+    .join{
+        position:relative;
+        left:210px;
+    }
     /* 확인(전송) 버튼 */
     input[type=submit]{
         width: 100px;
@@ -105,79 +114,118 @@
             </div>
             <!-- 사이드 메뉴 네비 -->
             <nav class="menu">
-                <ul class="navi">
-                    <li><span>PRODUCT</span>
-                        <ul class="submenu">
-                            <li><a href="#">ALL</a></li>
-                            <li><a href="#">TOP</a></li>
-                            <li><a href="#">OUTER</a></li>
-                            <li><a href="#">BOTTOM</a></li>
-                            <li><a href="#">ETC</a></li>
-                        </ul>
-                    </li>
-
-                    <li><span>ABOUT</span>
-                        <ul class="submenu">
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </li>
-
-                    <li><span>NEW</span>
-                        <ul class="submenu">
-                            <li><a href="#">new</a></li>
-                        </ul>
-                    </li>
-                </ul>
+              <ul class="navi">
+                <li><span>PRODUCT</span>
+                  <ul class="submenu">
+                    <li><a href="#">ALL</a></li>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">OUTER</a></li>
+                    <li><a href="#">BOTTOM</a></li>
+                    <li><a href="#">ETC</a></li>
+                  </ul>
+                </li>
+                
+                <li><span>ABOUT</span>
+                  <ul class="submenu">
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </li>
+                
+                <li><span>NEW</span>
+                  <ul class="submenu">
+                    <li><a href="#">new</a></li>
+                  </ul>
+                </li>
+              </ul>
             </nav>
-        </article>
-        <!--오른쪽사이드-->
-        <article class="right_main_view">
-            <!--메인 이미지섹션-->
-            <div class="mainImg">
-                <video src="images/mainVedio.mp4" autoplay loop muted></video>
-            </div>
-
-
-            <!--상품 섹션-->
-            <div class="middle_section">
-                중간들어가는부분
-            </div>
-            <!-- 로그인 영역 -->
-            <div class="container">
-                <div id="text">
-                    <p><h2>로그인</h2></p>
-                </div>
-                <div id="wrap">
-                    <div class="text"><h3>Member Login</h3></div>
-                    <div class="input">
-                        <input type="text" name="id" placeholder="">
-                        <input type="password" name="password" placeholder="PASSWORD">
-                        <input value="로그인" type="submit" name="login">
-                    </div>
-                </div>
-            </div>
-            <div id="footer">
-                <div class="shop_footer">
-                    <div class="textBox">
-                        <h1>
-                            Footer 영역
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="clear"></div> -->
         </article>
     </section>
 
+    <!-- 로그인 영역 -->
+    <div class="container">
+        <div id="text">
+            <p><h2>로그인</h2></p>
+        </div>
+        <div id="wrap">
+            <div class="text"><h3>Member Login</h3></div>
+            <div class="input">
+                <!-- 아이디 미입력 후 다음 단계 이동 시 나타나는 오류 메시지 -->
+                <label for="id" id="ID_Chk" style="display: none; color: red; font-size: 13px; font-weight: bold; position: relative; top: 60px; right: 290px;">
+                    * 필수 입력
+                </label>
+                <input type="text" name="id" id="id" onfocusout="CheckValue()">
+                
+                <input type="password" id="password" placeholder="PASSWORD" onfocusout="CheckValue1()">
+                <!-- 비밀번호 미입력 후 다음 단계 이동 시 나타나는 오류 메시지 -->
+                <label for="password" id="PASSWORD_Chk" style="display: none; color: red; font-size: 13px; font-weight: bold; position: relative; top: 90px; right: 290px;">
+                    * 필수 입력
+                </label>
+                <!-- 아이디 찾기, 비밀번호 찾기, 회원가입 이동 가능한 경로 -->
+                <div class="move">
+                    <img src="images/check.png" style="opacity: 0.5; width: 20px; height: 20px; cursor: pointer;"><span style="opacity: 0.6; font-size: 13px; font-weight: bold;"><a href="find_id.html">아이디 찾기</a></span>
+                    <img src="images/check.png" style="opacity: 0.5; width: 20px; height: 20px; cursor: pointer;"><span style="opacity: 0.6; font-size: 13px; font-weight: bold;"><a href="find_pw.html">비밀번호 찾기</a></span>
+                    <span class="join" style="opacity: 0.6; font-size: 13px; font-weight: bold;"><a href="jointest.html">회원가입</a></span>
+                </div>
+                <input value="로그인" type="submit" name="login">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="shop_footer">
+            <div class="textBox">
+                <h1>
+                    Footer 영역
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
     <script>
-        jQuery(document).ready(function () {
-            $('.navi>li').mouseover(function () {
-                $(this).find('.submenu').stop().slideDown(500);
-            }).mouseout(function () {
-                $(this).find('.submenu').stop().slideUp(500);
-            });
+        //로그인 실패 알럿 추가
+
+        
+
+        //필수 입력 문구, 테두리 색 변경 --> 빨간색으로
+        function CheckValue() {
+                    let _ID = document.getElementById("id").value;
+                    let ID_Label = document.getElementById("ID_Chk");
+
+                    if (_ID === "" || _ID == undefined) {
+                        ID_Label.style.display = "inline-block";
+                        document.getElementById("id").style.border = "1px solid red";
+                        document.getElementById("id").style.width = "350px";
+                        document.getElementById("id").style.height = "40px";
+                    }
+                    else {
+                        ID_Label.style.display = "none";
+                    }
+                }
+
+                function CheckValue1() {
+                    let _PASSWORD = document.getElementById("password").value;
+                    let _PASSWORD_Label = document.getElementById("PASSWORD_Chk");
+
+                    if (_PASSWORD === "" || _PASSWORD == undefined) {
+                        _PASSWORD_Label.style.display = "block";
+                        document.getElementById("password").style.border = "1px solid red";
+                        document.getElementById("password").style.width = "350px";
+                        document.getElementById("password").style.height = "40px";
+                    }
+                    else {
+                        _PASSWORD_Label.style.display = "none";
+                    }
+
+                }
+        //메인 메뉴 슬라이드
+        jQuery(document).ready(function(){
+        $('.navi>li').mouseover(function(){
+            $(this).find('.submenu').stop().slideDown(500);
+        }).mouseout(function(){
+            $(this).find('.submenu').stop().slideUp(500);
+        });
         });
     </script>
 </body>
-
 </html>
