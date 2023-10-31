@@ -1,0 +1,79 @@
+.productDetailsAll{
+    margin: 0 7.8947vw;
+}
+.productDetailsAll > .DetailsEach{
+    margin:0;
+    width:22.1052vw;
+    height:27.5263vw;
+    background-color:#000;
+    margin-right:0.7894vw;
+    margin-bottom:1.8421vw;
+    float:left;
+    position:relative;
+    overflow:hidden;
+}
+.productDetailsAll > .DetailsEach > img{
+    width:100%;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    font-size:14px;
+    height:10.526vw;
+    background-color:rgba(255,255,255,0.8);
+    display:none;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div{
+    position:relative;
+    height:100%;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:first-child{
+    position:absolute;
+    bottom:0;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:first-child p{
+    margin-bottom:1.0526vw;
+    margin-left:1.0526vw;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child{
+    position:absolute;
+    right:0;
+    bottom:1.0526vw;
+    text-align:right;
+    margin-right:1.0526vw;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child > div:nth-of-type(1){
+    margin-bottom:1.0526vw;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child > div:nth-of-type(1) a{
+    background-color:#fff;
+    display:inline-block;
+    height:100%;
+    width:20%;
+    padding:0.5263vw;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child > div:nth-of-type(1) a:hover{
+    background-color:#ddd;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child img{
+    width:100%;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child div:nth-of-type(2){
+    text-align:center;
+    background-color:#000;
+    display:inline-block;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child div:nth-of-type(2) a{
+    color:#fff;
+    font-size:14px;
+    padding:0.2631vw 0.5263vw;
+    display:block;
+}
+.productDetailsAll > .DetailsEach > .DetailsEachTextBox > div > div:last-child div:nth-of-type(2) a:hover{
+    background-color:#fff;
+    color:#000;
+}
+.productDetailsAll > .DetailsEach:nth-of-type(3n){
+    margin-right:0;
+}

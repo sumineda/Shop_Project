@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/mainShop.css" rel="stylesheet" type="text/css">
+    <link href="css/side.css" rel="stylesheet" type="text/css">
+    <link href="css/productDetails.css" rel="stylesheet" type="text/css">
+    <title>index</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/productDetails.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="icon_side">
+            <div>
+                <div class="icon_member">
+                    <a href="#">
+                        <img src="images/memberB.png" alt="member">
+                    </a>
+                </div>
+                <div class="icon_basket">
+                    <a href="#">
+                        <img src="images/basket.png" alt="basket">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </header>
+
+    <section>
+        <!--왼쪽사이드-->
+        <article class="left_side">
+            <div class="logo">
+                <img src="images/mainLogo.png" alt="mainLogo">
+            </div>
+            <!-- 사이드 메뉴 네비 -->
+            <nav class="menu">
+                <ul class="navi">
+                    <li><span>PRODUCT</span>
+                        <ul class="submenu">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">OUTER</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>ABOUT</span>
+                        <ul class="submenu">
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>NEW</span>
+                        <ul class="submenu">
+                            <li><a href="#">new</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </article>
+        <!--오른쪽사이드-->
+        <article class="right_main_view">
+            <!--상품 섹션카테고리별 등록-->
+            <div class="productDetailsAll">
+                <div class="DetailsEach" onmouseover="DetailsEachTextBoxShow()" onmouseout="DetailsEachTextBoxHide()">
+                    <img src="images/product/TOP/TopImg1.jpg">
+                    <div class="DetailsEachTextBox">
+                        <div>
+                            <div>
+                                <p>Name : 스니커즈 오버핏</p>
+                                <p>Price : 54,000 Won</p>
+                                <p>Color : 흰색 회색 검정</p>
+                                <p>Size : Free</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <a href="#"><img src="images/basket.png"></a>
+                                </div>
+                                <div>
+                                    <a href="#">바로 결제</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="DetailsEach"></div>
+                <div class="clear"></div>
+            </div>
+
+            <div id="footer">
+                <div class="shop_footer">
+                    <div class="textBox">
+                        <h1>
+                            Footer 영역
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </article>
+    </section>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('.navi>li').mouseover(function () {
+                $(this).find('.submenu').stop().slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu').stop().slideUp(500);
+            });
+        });
+    </script>
+</body>
+
+</html>

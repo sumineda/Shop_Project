@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/mainShop.css" rel="stylesheet" type="text/css">
+    <link href="css/side.css" rel="stylesheet" type="text/css">
+    <link href="css/order.css" rel="stylesheet" type="text/css">
+    <title>index</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="icon_side">
+            <div>
+                <div class="icon_member">
+                    <a href="#">
+                        <img src="images/memberB.png" alt="member">
+                    </a>
+                </div>
+                <div class="icon_basket">
+                    <a href="#">
+                        <img src="images/basket.png" alt="basket">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </header>
+
+    <section>
+        <!--왼쪽사이드-->
+        <article class="left_side">
+            <div class="logo">
+                <img src="images/mainLogo.png" alt="mainLogo">
+            </div>
+            <!-- 사이드 메뉴 네비 -->
+            <nav class="menu">
+                <ul class="navi">
+                    <li><span>PRODUCT</span>
+                        <ul class="submenu">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">TOP</a></li>
+                            <li><a href="#">OUTER</a></li>
+                            <li><a href="#">BOTTOM</a></li>
+                            <li><a href="#">ETC</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>ABOUT</span>
+                        <ul class="submenu">
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+
+                    <li><span>NEW</span>
+                        <ul class="submenu">
+                            <li><a href="#">new</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </article>
+        <!--오른쪽사이드-->
+        <article class="right_main_view">
+            <!--메인 이미지섹션-->
+            <div class="order">
+                <div class="orderTap">
+                    <ul>
+                        <li>
+                            <a href="#">주문조회내역</a>
+                        </li>
+                        <li>
+                            <a href="#">취소/반품/교환 내역</a>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+
+                <div class="orderTapSubmenu1">
+                    <form>
+                        <select>
+                            <option>전체 처리 상태</option>
+                            <option>주문</option>
+                            <option>취소</option>
+                            <option>교환</option>
+                            <option>반품</option>
+                        </select>
+
+                        <button type="">
+                            오늘
+                        </button>
+                        <button type="">
+                            1주일
+                        </button>
+                        <button type="">
+                            1개월
+                        </button>
+                        <button type="">
+                            3개월
+                        </button>
+                        <button type="">
+                            6개월
+                        </button>
+
+                        <label for="date">
+                            <input type="date" id="date" value="2023-01-01">
+                            ~
+                            <input type="date" id="date" value="2023-12-01">
+                        </label>
+                        <label>
+                            <input type="submit" value="조회">
+                        </label>
+                    </form>
+
+                    <div>
+                        <p>
+                            기본적으로 최근 3개월간의 자료가 조회되며, 기간 검색시 주문처리완료 후 15개월 이내 주문내역을 조회하실 수 있습니다.<br>
+주문번호를 클릭하시면 해당 주문에 대한 상세내역을 확인하실 수 있습니다.<br>
+취소/교환/반품 신청은 배송완료일 기준 7일까지 가능합니다.
+                        </p>
+                    </div>
+
+                    <h4>
+                        주문 상품 정보
+                    </h4>
+
+                    <div>
+                        <table border="1">
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="shop_footer">
+                    <div class="textBox">
+                        <h1>
+                            Footer 영역
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </article>
+    </section>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('.navi>li').mouseover(function () {
+                $(this).find('.submenu').stop().slideDown(500);
+            }).mouseout(function () {
+                $(this).find('.submenu').stop().slideUp(500);
+            });
+        });
+    </script>
+</body>
+
+</html>
