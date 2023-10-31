@@ -6,6 +6,7 @@ table{
     margin-top:7.8947vw;
     margin-bottom:5.2631vw;
     margin-left:2.1052vw;
+    margin-right:2.1052vw;
 }
 .order .orderTap{
     margin-bottom:1.5789vw;
@@ -17,17 +18,28 @@ table{
     float:left;
     margin-right:0.5263vw;
     padding:0;
-}
-.order .orderTap li a{
     display:block;
     border:1px solid #000;
     padding:0.5263vw 1.0526vw;
+    cursor: pointer;
 }
 .order .orderTapSubmenu1 > div > p{
     margin:2.6315vw 0;
-<<<<<<< Updated upstream
 }
-=======
+.AllOrder{
+    display:block;
 }
-.AllOrder
->>>>>>> Stashed changes
+
+.AllOrder table{
+    width:100%;
+    text-align:center;
+}
+
+.OrderCancel{
+    display:none;
+}
+
+.OrderCancel table{
+    width:100%;
+    text-align:center;
+}

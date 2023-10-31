@@ -9,6 +9,7 @@
     <link href="css/order.css" rel="stylesheet" type="text/css">
     <title>index</title>
     <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/order.js"></script>
 </head>
 
 <body>
@@ -69,11 +70,11 @@
             <div class="order">
                 <div class="orderTap">
                     <ul>
-                        <li>
-                            <a href="#">주문조회내역</a>
+                        <li class="orderTapOrder" onclick="orderTapOrder()">
+                            주문조회내역
                         </li>
-                        <li>
-                            <a href="#">취소/반품/교환 내역</a>
+                        <li class="orderTapCancel" onclick="orderTapCancel()">
+                            취소/반품/교환 내역
                         </li>
                         <div class="clear"></div>
                     </ul>
@@ -137,7 +138,115 @@
                                 <th>상품구매금액</th>
                                 <th>주문처리상태</th>
                                 <th>취소/교환/반품</th>
+                                <th>접수</th>
                             </tr>
+                            <form>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            2023-09-14
+                                        </p>
+                                        <p>
+                                            [a85394614561]
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <img src="" alt="Image">
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            상품이름
+                                        </p>
+                                        <p>
+                                            옵션
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            1
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            29,800 Won
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            결제완료
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            x
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <input type="submit" value="클릭하기">
+                                    </td>
+                                </tr>
+                            </form>
+                        </table>
+                    </div>
+
+                    <div class="OrderCancel">
+                        <table border="1">
+                            <tr>
+                                <th>주문일자[주문번호]</th>
+                                <th>이미지</th>
+                                <th>상품정보</th>
+                                <th>수량</th>
+                                <th>상품구매금액</th>
+                                <th>주문처리상태</th>
+                                <th>취소/교환/반품</th>
+                            </tr>
+                            <form>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            2023-09-14
+                                        </p>
+                                        <p>
+                                            [a85394614561]
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            <img src="" alt="Image">
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            상품이름
+                                        </p>
+                                        <p>
+                                            옵션
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            1
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            29,800 Won
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            결제완료
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            x
+                                        </p>
+                                    </td>
+                                </tr>
+                            </form>
                         </table>
                     </div>
                 </div>
