@@ -1,309 +1,169 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/mainShop.css" rel="stylesheet" type="text/css">
-    <link href="css/side.css" rel="stylesheet" type="text/css">
-    <title>cart</title>
-    <script src="js/jquery-3.7.0.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/cart.css" rel="stylesheet" type="text/css">
+  <link href="css/side.css" rel="stylesheet" type="text/css">
+  <title>cart</title>
+  <script src="js/jquery-3.7.0.min.js"></script>
 </head>
 
-<!-- 로그인 css는 본문 첨가 -->
-<!-- 로그인 css -->
-<style>
-/* 장바구니 */
-.cart{
-    padding: 10% 0;
-    margin: 0 auto;
-    width: 1000px;
-    position: relative;
-}
-.cart h3 {
-  text-align: center;
-}
-.cart img{
-    width: 18px;
-}
-/* 상품 전체 선택 */
-.cart .check{
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 0;
-    border-bottom: 2px solid #000;
-    font-size: 0.8em;
-    font-weight: bold;
-}
-/* 장바구니에 담긴 상품 */
-.row-data{
-    display: flex;
-    width: 80%; 
-    height: 130px;
-    margin: 0 auto;
-    border-bottom: 1px solid #000;
-    padding: 0;
-
-}
-.row-data .check2{
-    padding: 40px 0;
-}
-.row-data img{
-    padding: 10px 0;
-    width: 85px;
-    margin-left: -15px;
-}
-.row-data .mid-info{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    font-size: .8em;
-}
-.row-data .mid-info div {
-    height: 70%;
-    padding: 10px;
-    position: relative;
-}
-.row-data .name span {
-  font-weight: bold ;
-  font-size: 1.1em;
-  position: relative;
-  top: 10px;
-  right: 300px;
-}
-.row-data .name .box{
-    width: 15px; 
-    height: 15px;
-    float: right;
-    position: relative;
-    top: 0;
-    left: 300px;
-    padding: 0;
-    text-align: center;
-    font-size: 12px;
-    font-weight:bold ;
-    border: none;
-    cursor: pointer;
-}
-/* 상품 옵션 */
-.option span {
-    font-size: 0.8em;
-    position: relative;
-    top: -10px;
-    right: 280px;
-}
-.option span:nth-child(2){
-  text-decoration: underline;
-}
-/* 상품 수량 */
-.count {
-  position: relative;
-  top: -20px;
-  right: 300px;
-}
-input[type=text]{
-  width: 15px;
-  height: 15px;
-  text-align: center;
-}
-.count button {
-  background: #ccc;
-  border: none;
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-/* 상품 배송비와 가격 */
-.price {
-  position:relative;
-  top: -30px;
-}
-.price span:first-child {
-  position: relative;
-  right: 235px;
-  font-weight: bold;
-}
-.price span:last-child {
-  position: relative;
-  left: 230px;
-  font-weight: bold;
-}
-/* 총 주문 금액과 구매하기 버튼 */
-.total {
-  position: relative;
-  top: 10px;
-  left:100px;
-  font-weight: bold;
-}
-.total span:nth-child(2), .total span:nth-child(3){
-  position: relative;
-  left: 690px;
-}
-.order button {
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
-  border:1px solid #ccc;
-  background: #ccc;
-  font-weight: bold;
-  position: relative;
-  top: 30px;
-  left: 750px;
-  cursor: pointer;
-}
-</style>
 <body>
-    <header>
-        <nav class="icon_side">
-            <div>
-                <div class="icon_member">
-                    <a href="#">
-                        <img src="images/memberW.png" alt="member">
-                    </a>
-                </div>
-                <div class="icon_basket">
-                    <a href="#">
-                        <img src="images/basketW.png" alt="basket">
-                    </a>
-                </div>
-            </div>
-        </nav>
-        <div class="clear"></div>
-    </header>
-
-    <section>
-        <!--왼쪽사이드-->
-        <article class="left_side">
-            <div class="logo">
-                <img src="images/mainLogo.png" alt="mainLogo">
-            </div>
-            <!-- 사이드 메뉴 네비 -->
-            <nav class="menu">
-              <ul class="navi">
-                <li><span>PRODUCT</span>
-                  <ul class="submenu">
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">TOP</a></li>
-                    <li><a href="#">OUTER</a></li>
-                    <li><a href="#">BOTTOM</a></li>
-                    <li><a href="#">ETC</a></li>
-                  </ul>
-                </li>
-                
-                <li><span>ABOUT</span>
-                  <ul class="submenu">
-                    <li><a href="#">FAQ</a></li>
-                  </ul>
-                </li>
-                
-                <li><span>NEW</span>
-                  <ul class="submenu">
-                    <li><a href="#">new</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-        </article>
-    </section>
-
-    <!-- 장바구니 -->
-
-    <!-- 추가 구현 사항 -->
-    <!-- 1. (스프링에서)상품 삭제 기능 구현하기 -->
-    <!-- 2. 상품명과 옵션, 가격 등 전부 동적 구현 필요 -->
-
-    <div class="cart">
-      <h3>장바구니</h3>
-      <div class="check"><input type="checkbox" name="checkBox" onclick='selectAll(this)'> 모두 선택</div>
-
-      <div class="row-data">
-          <div class="check2"><input type="checkbox" name="checkBox"></div>
-          <div class="img"><img src="images/TopImg2.jpg"></div>
-          <div class="mid-info">
-              <div class="name">
-                  <span>상품명1</span>
-                  <!-- 삭제 버튼 -->
-                  <button class="box" onclick="none()">
-                      x
-                  </button>
-              </div>
-              <!-- 상품 옵션  -->
-              <div class="option">
-                <span>[옵션 : BLACK]</span>
-                <span><a href="#">옵션변경</a></span><br/>
-              </div>
-              <!-- 상품 수량 -->
-              <div class="count">
-                <span>
-                  <button class="minus_btn">-</button>
-                  <input type="text" class="quantity_input" value="1">
-                  <button class="plus_btn">+</button>
-                </span>
-              </div>
-              <!-- 상품 가격 + 배송비 -->
-              <div class="price">
-                  <span>가격 : (원)</span>
-                  <span>배송 : 기본 배송 / 무료</span>
-              </div>
-          </div>
-      </div>
-      <!-- 총 주문 금액과 구매하기 버튼 -->
-      <div class="total">
-        <span>주문 금액</span>
-        <span>0</span>
-        <span>원</span>        
-      </div>
-      <div class="order">
-        <button>구매하기</button>
-      </div>
-    </div>
-
-
-    <div id="footer">
-        <div class="shop_footer">
-            <div class="textBox">
-                <h1>
-                    Footer 영역
-                </h1>
-            </div>
+  <header>
+    <nav class="icon_side">
+      <div>
+        <div class="icon_member">
+          <a href="#">
+            <img src="images/memberW.png" alt="member">
+          </a>
         </div>
-    </div>
+        <div class="icon_basket">
+          <a href="#">
+            <img src="images/basketW.png" alt="basket">
+          </a>
+        </div>
+      </div>
+    </nav>
     <div class="clear"></div>
+  </header>
 
-    <script>
-      //메인 사이드 슬라이드
-      jQuery(document).ready(function(){
-      $('.navi>li').mouseover(function(){
+  <section>
+    <!--왼쪽사이드-->
+    <article class="left_side">
+      <div class="logo">
+        <img src="images/mainLogo.png" alt="mainLogo">
+      </div>
+      <!-- 사이드 메뉴 네비 -->
+      <nav class="menu">
+        <ul class="navi">
+          <li><span>PRODUCT</span>
+            <ul class="submenu">
+              <li><a href="#">ALL</a></li>
+              <li><a href="#">TOP</a></li>
+              <li><a href="#">OUTER</a></li>
+              <li><a href="#">BOTTOM</a></li>
+              <li><a href="#">ETC</a></li>
+            </ul>
+          </li>
+
+          <li><span>ABOUT</span>
+            <ul class="submenu">
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+
+          <li><span>NEW</span>
+            <ul class="submenu">
+              <li><a href="#">new</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </article>
+    <!--오른쪽사이드-->
+    <article class="right_main_view">
+      <!-- 장바구니 -->
+
+      <!-- 추가 구현 사항 -->
+      <!-- 1. (스프링에서)상품 삭제 기능 구현하기 -->
+      <!-- 2. 상품명과 옵션, 가격 등 전부 동적 구현 필요 -->
+
+      <div class="cart">
+        <h3>장바구니</h3>
+        <div class="check"><input type="checkbox" name="checkBox" onclick='selectAll(this)'> 모두 선택</div>
+
+        <div class="row-data">
+          <div class="check2"><input type="checkbox" name="checkBox"></div>
+          <div class="img"><img src="images/TOP/TopImg2.jpg"></div>
+          <div class="mid-info">
+            <div class="name">
+              <span>상품명1</span>
+              <!-- 삭제 버튼 -->
+              <button class="box" onclick="none()">
+                x
+              </button>
+            </div>
+            <!-- 상품 옵션  -->
+            <div class="option">
+              <span>[옵션 : BLACK]</span>
+              <span><a href="#">옵션변경</a></span><br />
+            </div>
+            <!-- 상품 수량 -->
+            <div class="count">
+              <span>
+                <button class="minus_btn">-</button>
+                <input type="text" class="quantity_input" value="1">
+                <button class="plus_btn">+</button>
+              </span>
+            </div>
+            <!-- 상품 가격 + 배송비 -->
+            <div class="price">
+              <span>가격 : (원)</span>
+              <span>배송 : 기본 배송 / 무료</span>
+            </div>
+          </div>
+        </div>
+        <!-- 총 주문 금액과 구매하기 버튼 -->
+        <div class="total">
+          <span>주문 금액</span>
+          <span>0</span>
+          <span>원</span>
+        </div>
+        <div class="order">
+          <button>구매하기</button>
+        </div>
+      </div>
+
+
+      <div id="footer">
+        <div class="shop_footer">
+          <div class="textBox">
+            <h1>
+              Footer 영역
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </article>
+  </section>
+
+  <script>
+    //메인 사이드 슬라이드
+    jQuery(document).ready(function () {
+      $('.navi>li').mouseover(function () {
         $(this).find('.submenu').stop().slideDown(500);
-      }).mouseout(function(){
+      }).mouseout(function () {
         $(this).find('.submenu').stop().slideUp(500);
       });
-        });
+    });
 
-      // 상품 전체 선택
-      function selectAll(selectAll)  {
-        const checkboxes 
-          = document.querySelectorAll('input[type="checkbox"]');
-        
-        checkboxes.forEach((checkbox) => {
-          checkbox.checked = selectAll.checked
-        })
-      }
-      //수량 버튼 조작
-      let quantity = $(".quantity_input").val();
-      $(".plus_btn").on("click", function(){
-        $(".quantity_input").val(++quantity);
-      });
-      $(".minus_btn").on("click", function(){
-        if(quantity > 1){
-          $(".quantity_input").val(--quantity);	
-        }
-      });
-      // 상품 삭제 버튼
-      function none(){
-        document.querySelector(".row-data").style.display = "none";
+    // 상품 전체 선택
+    function selectAll(selectAll) {
+      const checkboxes
+        = document.querySelectorAll('input[type="checkbox"]');
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.checked = selectAll.checked
+      })
     }
-    </script>
+    //수량 버튼 조작
+    let quantity = $(".quantity_input").val();
+    $(".plus_btn").on("click", function () {
+      $(".quantity_input").val(++quantity);
+    });
+    $(".minus_btn").on("click", function () {
+      if (quantity > 1) {
+        $(".quantity_input").val(--quantity);
+      }
+    });
+    // 상품 삭제 버튼
+    function none() {
+      document.querySelector(".row-data").style.display = "none";
+    }
+  </script>
 </body>
+
 </html>
