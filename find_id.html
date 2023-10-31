@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/mainShop.css" rel="stylesheet" type="text/css">
+    <link href="css/side.css" rel="stylesheet" type="text/css">
+    <title>find_id</title>
+    <script src="js/jquery-3.7.0.min.js"></script>
+</head>
+<!-- 로그인 css는 본문 첨가 -->
+<!-- 로그인 css -->
+<style>
+        /* 아이디 찾기 문구 */
+          h2 {
+            text-align: center;
+            position: relative;
+            top: 170px;
+            left: 100px;
+          }
+          /* 아이디 문구 감싸는 구역 */
+          .text {
+            width: 200px;       
+            height: 50px;
+            margin-top: 0px;
+          }
+          /* 폼 감싸는 랩 */
+          .wrap {
+            width: 600px;
+            border: 2px solid #ddd;
+            height: 300px;
+            position: relative;
+            top: 170px;
+            left: 100px;
+          }
+          /* 폼 + 글자 감싸는 구역 */
+          .wrap div {
+            width: 400px;
+            height: 40px;
+          }
+          /* 아이디, 이메일 명시 글자 */
+          .wrap div span {
+            position: absolute;
+            left: 40px;
+            margin-top:75px;
+            padding: 10px;
+          }
+          /* 아이디, 이메일 */
+          input[type=text],[type=email] {
+            position: absolute;
+            width: 350px;
+            height: 40px;
+            top: 65PX;
+            right: 50px;
+          }
+          /* 이메일로 찾기 */
+          input[name=email]{
+            position:absolute;
+            top: 115px;
+          }
+          /* 확인 버튼 */
+          input[type=submit]{
+            width: 120px;
+            height: 45px;
+            position: absolute;
+            top:220px;
+            left: 250px;
+            background: #2e2e2e;
+            border: none;
+            color: #fff;
+            }
+          
+</style>
+<body>
+    <header>
+        <nav class="icon_side">
+            <div>
+                <div class="icon_member">
+                    <a href="#">
+                        <img src="images/memberW.png" alt="member">
+                    </a>
+                </div>
+                <div class="icon_basket">
+                    <a href="#">
+                        <img src="images/basketW.png" alt="basket">
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="clear"></div>
+    </header>
+
+    <section>
+        <!--왼쪽사이드-->
+        <article class="left_side">
+            <div class="logo">
+                <img src="images/mainLogo.png" alt="mainLogo">
+            </div>
+            <!-- 사이드 메뉴 네비 -->
+            <nav class="menu">
+              <ul class="navi">
+                <li><span>PRODUCT</span>
+                  <ul class="submenu">
+                    <li><a href="#">ALL</a></li>
+                    <li><a href="#">TOP</a></li>
+                    <li><a href="#">OUTER</a></li>
+                    <li><a href="#">BOTTOM</a></li>
+                    <li><a href="#">ETC</a></li>
+                  </ul>
+                </li>
+                
+                <li><span>ABOUT</span>
+                  <ul class="submenu">
+                    <li><a href="#">FAQ</a></li>
+                  </ul>
+                </li>
+                
+                <li><span>NEW</span>
+                  <ul class="submenu">
+                    <li><a href="#">new</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+        </article>
+    </section>
+
+    <!-- 아이디 찾기 영역 -->
+    <div class="container">
+        <div class="text">
+            <p><h2>아이디 찾기</h2></p>
+        </div>
+        <div class="wrap">
+          <div>
+            <span style="font-weight: bold;"><img src="images/icon.png" style="width: 10px; opacity: 0.7;">이름</span>
+            <input type="text" name="name" id="name" class="check" onfocusout="CheckValue()">
+             <!-- 이름 미입력 후 다음 단계 이동 시 나타나는 오류 메시지 -->
+             <label for="name" id="NAME_Chk" style="display: none; color: red; font-size: 13px; font-weight: bold; position: relative; top: 75px; left: 455px;">
+              * 이름을(를) 입력하세요.
+          </label>
+          </div>
+          <div>
+            <span style="font-weight: bold;"><img src="images/icon.png" style="width: 10px; opacity: 0.7;">이메일로 찾기</span>
+            <input type="email" name="email" id="email" onfocusout="CheckValue1()">
+            <!-- 이메일 미입력 후 다음 단계 이동 시 나타나는 오류 메시지 -->
+            <label for="email" id="EMAIL_Chk" style="display: none; color: red; font-size: 13px; font-weight: bold; position: relative; top: 90px; left: 455px;">
+              * 이메일을(를) 입력하세요.
+          </label>
+          </div>
+          <input value="확인" type="submit" name="submit" class="check" style="cursor: pointer;">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="shop_footer">
+            <div class="textBox">
+                <h1>
+                    Footer 영역
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <script>
+      //필수 입력 문구, 테두리 색 변경 --> 빨간색으로
+      function CheckValue() {
+                    let _ID = document.getElementById("name").value;
+                    let ID_Label = document.getElementById("NAME_Chk");
+
+                    if (_ID === "" || _ID == undefined) {
+                        ID_Label.style.display = "inline-block";
+                        document.getElementById("name").style.border = "1px solid red";
+                        document.getElementById("name").style.width = "350px";
+                        document.getElementById("name").style.height = "40px";
+                    }
+                    else {
+                        ID_Label.style.display = "none";
+                    }
+                }
+
+                function CheckValue1() {
+                    let _PASSWORD = document.getElementById("email").value;
+                    let _PASSWORD_Label = document.getElementById("EMAIL_Chk");
+
+                    if (_PASSWORD === "" || _PASSWORD == undefined) {
+                        _PASSWORD_Label.style.display = "block";
+                        document.getElementById("email").style.border = "1px solid red";
+                        document.getElementById("email").style.width = "350px";
+                        document.getElementById("email").style.height = "40px";
+                    }
+                    else {
+                        _PASSWORD_Label.style.display = "none";
+                    }
+
+                }
+      //메인 메뉴 슬라이드
+        jQuery(document).ready(function(){
+        $('.navi>li').mouseover(function(){
+          $(this).find('.submenu').stop().slideDown(500);
+        }).mouseout(function(){
+          $(this).find('.submenu').stop().slideUp(500);
+        });
+          });
+    </script>
+</body>
+</html>
