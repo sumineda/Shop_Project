@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,153 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/mainShop.css" rel="stylesheet" type="text/css">
     <link href="css/side.css" rel="stylesheet" type="text/css">
+    <link href="css/cart.css" rel="stylesheet" type="text/css">
     <title>cart</title>
     <script src="js/jquery-3.7.0.min.js"></script>
 </head>
 
-<!-- 로그인 css는 본문 첨가 -->
-<!-- 로그인 css -->
-<style>
-/* 장바구니 */
-.cart{
-    padding: 10% 0;
-    margin: 0 auto;
-    width: 1000px;
-    position: relative;
-}
-.cart h3 {
-  text-align: center;
-}
-.cart img{
-    width: 18px;
-}
-/* 상품 전체 선택 */
-.cart .check{
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 0;
-    border-bottom: 2px solid #000;
-    font-size: 0.8em;
-    font-weight: bold;
-}
-/* 장바구니에 담긴 상품 */
-.row-data{
-    display: flex;
-    width: 80%; 
-    height: 130px;
-    margin: 0 auto;
-    border-bottom: 1px solid #000;
-    padding: 0;
-
-}
-.row-data .check2{
-    padding: 40px 0;
-}
-.row-data img{
-    padding: 10px 0;
-    width: 85px;
-    margin-left: -15px;
-}
-.row-data .mid-info{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    font-size: .8em;
-}
-.row-data .mid-info div {
-    height: 70%;
-    padding: 10px;
-    position: relative;
-}
-.row-data .name span {
-  font-weight: bold ;
-  font-size: 1.1em;
-  position: relative;
-  top: 10px;
-  right: 300px;
-}
-.row-data .name .box{
-    width: 15px; 
-    height: 15px;
-    float: right;
-    position: relative;
-    top: 0;
-    left: 300px;
-    padding: 0;
-    text-align: center;
-    font-size: 12px;
-    font-weight:bold ;
-    border: none;
-    cursor: pointer;
-}
-/* 상품 옵션 */
-.option span {
-    font-size: 0.8em;
-    position: relative;
-    top: -10px;
-    right: 280px;
-}
-.option span:nth-child(2){
-  text-decoration: underline;
-}
-/* 상품 수량 */
-.count {
-  position: relative;
-  top: -20px;
-  right: 300px;
-}
-input[type=text]{
-  width: 15px;
-  height: 15px;
-  text-align: center;
-}
-.count button {
-  background: #ccc;
-  border: none;
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-/* 상품 배송비와 가격 */
-.price {
-  position:relative;
-  top: -30px;
-}
-.price span:first-child {
-  position: relative;
-  right: 235px;
-  font-weight: bold;
-}
-.price span:last-child {
-  position: relative;
-  left: 230px;
-  font-weight: bold;
-}
-/* 총 주문 금액과 구매하기 버튼 */
-.total {
-  position: relative;
-  top: 10px;
-  left:100px;
-  font-weight: bold;
-}
-.total span:nth-child(2), .total span:nth-child(3){
-  position: relative;
-  left: 690px;
-}
-.order button {
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
-  border:1px solid #ccc;
-  background: #ccc;
-  font-weight: bold;
-  position: relative;
-  top: 30px;
-  left: 750px;
-  cursor: pointer;
-}
-</style>
 <body>
     <header>
         <nav class="icon_side">
@@ -210,7 +67,6 @@ input[type=text]{
     <!-- 장바구니 -->
 
     <!-- 추가 구현 사항 -->
-    <!-- 1. (스프링에서)상품 삭제 기능 구현하기 -->
     <!-- 2. 상품명과 옵션, 가격 등 전부 동적 구현 필요 -->
 
     <div class="cart">
