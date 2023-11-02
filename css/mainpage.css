@@ -164,10 +164,6 @@ section .right_main_view .product {
     .product_list {
         min-width: 200px;
     }
-
-    .product_list .list {
-        /* width: calc(33.3% - 10px);  삭제*/
-    }
 }
 
 .product_img {
