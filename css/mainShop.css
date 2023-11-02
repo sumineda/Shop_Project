@@ -124,6 +124,8 @@ section .right_main_view .middle_section{
 
 /*footer*/
 #footer .shop_footer{
+    margin-top: 400px;
+    
     height:10.416vw;
     background-color: #000;
     color:#fff;
