@@ -118,12 +118,13 @@ section .right_main_view .mainImg video{
     height:100%;
 }
 /*상품섹션*/
-section .right_main_view .middle_section{
+section .right_main_view .product{
     text-align:center;
 }
 
 /*footer*/
 #footer .shop_footer{
+
     margin-top: 400px;
     
     height:10.416vw;

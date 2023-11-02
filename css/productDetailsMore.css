@@ -107,7 +107,67 @@
 .productDetailsMoreMiddle{
     width:41.0526vw;
     padding-top:5.2631vw;
+    height:26.3157vw;
+    overflow:hidden;
 }
 .productDetailsMoreMiddle img{
     width:100%;
+}
+.productInfoShow{
+    text-align:center;
+    width:41.0526vw;
+    background-color:#000;
+    cursor: pointer;
+    color:#fff;
+    padding:1.0526vw 0;
+    margin-top:1.0526vw;
+    margin-bottom:1.0526vw;
+    display:block;
+}
+.productInfoHide{
+    text-align:center;
+    width:41.0526vw;
+    background-color:#000;
+    cursor: pointer;
+    color:#fff;
+    padding:1.0526vw 0;
+    margin-top:1.0526vw;
+    margin-bottom:1.0526vw;
+    display:none;
+}
+.productInfoOffer{
+    width:41.0526vw;
+    margin-bottom:3.6842vw;
+}
+.TermsOfTransaction{
+    width:41.0526vw;
+}
+.productInfoOffer > h4, .TermsOfTransaction > h4{
+    margin-bottom:1.0526vw;
+}
+.productInfoOffer > div, .TermsOfTransaction > div{
+    border:1px solid #000;
+    padding:1.0526vw;
+    height:6.3157vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.recommendProduct{
+    width:41.0526vw;
+    margin-bottom:5.2631vw;
+}
+.recommendProduct .recommendProductBox{
+    width:7.8947vw;
+    height:7.8947vw;
+    display:inline-block;
+}
+.recommendProduct .recommendProductBox > .recommendProductBoxImg{
+    height:70%;
+    overflow:hidden;
+}
+.recommendProduct .recommendProductBox img{
+    width:100%;
+}
+.recommendProduct .recommendProductBox > .recommendProductBoxText{
+    text-align:center;
 }
