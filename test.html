@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            margin:30px;
+            overflow:hidden;
+            cursor: pointer;
+            float:left;
+        }
+        .image1{
+            width:400px;
+            height:400px;
+        }
+        div > img{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="image1">
+        <img src="images/BOTTOM/BottomImg1.jpg">
+    </div>
+    <div class="image2">
+        <img src="images/BOTTOM/BottomImg1_1.jpg">
+    </div>
+    <div class="image3">
+        <img src="images/BOTTOM/BottomImg1_2.jpg">
+    </div>
+
+    <script>
+        var arrImage = new Array("images/BOTTOM/BottomImg1.jpg","images/BOTTOM/BottomImg1_1.jpg","images/BOTTOM/BottomImg1_2.jpg");
+
+        console.log(arrImage.indexOf(1));
+    </script>
+</body>
+</html>

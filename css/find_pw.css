@@ -1,0 +1,59 @@
+    /* 비밀번호 찾기 문구 */
+    h2 {
+        text-align: center;
+        position: relative;
+        top: 170px;
+        left: 100px;
+        font-weight: 600;
+      }
+      /* 폼 감싸는 랩 */
+      .wrap {
+        width: 600px;
+        border: 2px solid #ddd;
+        height: 300px;
+        position: relative;
+        top: 200px;
+        left: 100px;
+      }
+      /* 폼 + 글자 감싸는 구역 */
+      .wrap div {
+        width: 400px;
+        height: 40px;
+      }
+      /* 아이디, 이름, 이메일 명시 글자 */
+      .wrap div span {
+        position: absolute;
+        left: 40px;
+        margin-top:75px;
+        padding: 10px;
+      }
+      /* 아이디, 이름, 이메일 */
+      input[type=text],[type=email] {
+        position: absolute;
+        width: 350px;
+        height: 40px;
+        top: 65PX;
+        right: 50px;
+      }
+      /* 이름 */
+      input[name=name]{
+        position:absolute;
+        top: 115px;
+      }
+      /* 이메일로 찾기 */
+      input[name=email]{
+        position:absolute;
+        top: 165px;
+      }
+      /* 확인 버튼 */
+      input[type=submit]{
+        width: 120px;
+        height: 45px;
+        position: absolute;
+        top:230px;
+        left: 250px;
+        background: #2e2e2e;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        }

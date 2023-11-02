@@ -124,7 +124,7 @@ section .right_main_view .product{
 
 /*footer*/
 #footer .shop_footer{
-    /* 원래 css에서 임의로 추가함-->위치 잡기 위해서 */
+
     margin-top: 400px;
     
     height:10.416vw;

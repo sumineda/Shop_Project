@@ -18,3 +18,15 @@ function productDetailsMoreMiddleHide(){
     productInfoShow.style.display = "block";
     productInfoHide.style.display = "none";
 }
+function BigImgChange1(){
+    var BigImg = document.getElementById("BigImg");
+    BigImg.src = "images/TOP/TopImg1_1.jpg"
+};
+function BigImgChange2(){
+    var BigImg = document.getElementById("BigImg");
+    BigImg.src = "images/TOP/TopImg1_2.jpg"
+};
+function BigImgBack(){
+    var BigImg = document.getElementById("BigImg");
+    BigImg.src = "images/TOP/TopImg1.jpg"
+};
