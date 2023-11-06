@@ -242,7 +242,7 @@ section .right_main_view .middle_section{
     background: #ccc;
     font-weight: bold;
     position: relative;
-    top: -45px;
+    top: -0px;
     left: 265px;
     cursor: pointer;
 }
